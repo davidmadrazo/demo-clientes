@@ -4,6 +4,9 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Prueba tu Chatbot IA | ProfimaxIA',
   description: 'Configura tu negocio en 30 segundos y prueba un chatbot personalizado en vivo. Sin registro, sin compromiso.',
+  icons: {
+    icon: '/icon.png',
+  },
   openGraph: {
     title: 'Prueba tu Chatbot IA | ProfimaxIA',
     description: 'Configura tu negocio en 30 segundos y prueba un chatbot personalizado en vivo.',
