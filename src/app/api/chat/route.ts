@@ -1,4 +1,4 @@
-import { openai } from '@ai-sdk/openai'
+import { openrouter, MODELS } from '@/lib/ai/openrouter'
 import { streamText, convertToModelMessages, type UIMessage } from 'ai'
 import { z } from 'zod'
 import { businessConfigSchema } from '@/features/demo/types'
@@ -48,7 +48,7 @@ export async function POST(req: Request) {
   const modelMessages = await convertToModelMessages(messages as UIMessage[])
 
   const result = streamText({
-    model: openai('gpt-4o-mini'),
+    model: openrouter(MODELS.fast),
     system: buildSystemPrompt(businessConfig),
     messages: modelMessages,
   })
